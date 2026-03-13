@@ -1,9 +1,11 @@
-This directory should contain the following images:
+This directory contains image assets used by the BROWSE 2026 website.
 
-1. logo.png - The BROWSE 2025 logo
-2. hero-bg.jpg - Background image for the hero section
-3. about-image.jpg - Image for the about section
-4. qr-code.png - QR code for registration
-5. sponsor1.png through sponsor6.png - Sponsor logos
+Current files in use:
 
-You should add real images to make the website fully functional. 
+1. Browse_logo.jpeg - BROWSE logo (navbar branding)
+2. sit-log.jpeg - SIT logo (navbar and SIT info panel)
+3. hero-robot-2.png - Hero section visual
+4. hero-robot.png - Alternate hero visual asset
+5. poster.png - About section event poster
+
+If you add or rename images, update HTML/CSS references in `index.html` and related styles.
