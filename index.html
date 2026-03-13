@@ -63,7 +63,7 @@
         <li><a href="#branches">Branches</a></li>
         <li><a href="#coordinators">Team</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="https://forms.gle/AJjoC4Zme3sCG2JHA" target="_blank" style="color:var(--neon-cyan);">Register Now
+        <li><a href="#" data-link="registerForm" target="_blank" style="color:var(--neon-cyan);">Register Now
                 →</a></li>
     </ul>
 
@@ -75,17 +75,7 @@
         <div class="hero-grid-floor"></div>
         <div class="hero-glow-main"></div>
         <div class="hero-glow-accent"></div>
-
-        <!-- Robot image — right side -->
-        <img src="assets/images/hero-robot.png" alt="Cyberpunk AI Robot" style="
-      position:absolute; right:0; bottom:0;
-      height:min(92vh, 760px); width:auto;
-      object-fit:contain; z-index:1;
-      pointer-events:none;
-      mask-image: linear-gradient(to left, rgba(0,0,0,1) 50%, transparent 100%), linear-gradient(to top, rgba(0,0,0,0.5), transparent 20%);
-      -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 50%, transparent 100%);
-      filter: saturate(1.15) brightness(0.9);
-    ">
+        <img src="assets/images/hero-robot-2.png" alt="Browse Hero Robot" class="hero-robot-img">
 
         <div class="hero-content z1">
             <div class="hero-content-inner">
@@ -111,7 +101,7 @@
                     NATIONAL LEVEL TECHNICAL SYMPOSIUM
                 </p>
                 <p class="hero-date">
-                    <i class="fas fa-calendar-alt"></i> 07 APRIL 2026 &nbsp;·&nbsp;
+                    <i class="fas fa-calendar-alt"></i> 07 APRIL 2026 <span class="sep">&nbsp;·&nbsp;</span>
                     <i class="fas fa-location-dot"></i> SIT, TUMAKURU
                 </p>
 
@@ -141,24 +131,25 @@
                 <!-- Prize pool -->
                 <div class="prize-strip">
                     <i class="fas fa-trophy"></i>
-                    PRIZE POOL &nbsp;·&nbsp; ₹75,000 AWAITS
+                    PRIZE POOL &nbsp;·&nbsp; ₹75,000
                 </div>
 
                 <!-- CTAs -->
                 <div class="hero-btns">
-                    <a href="https://forms.gle/AJjoC4Zme3sCG2JHA" target="_blank" class="btn btn-cyber">
+                    <a href="#" data-link="registerForm" target="_blank" class="btn btn-cyber">
                         <i class="fas fa-bolt"></i> Register Now
                     </a>
                     <a href="#events" class="btn btn-outline-cyber">
                         <i class="fas fa-list"></i> View Events
                     </a>
-                    <a href="https://drive.google.com/file/d/1y6k1ut-QDxwT8L7Gky0SC9iIGaXXAvJT/view?usp=sharing"
+                    <a href="#" data-link="brochure"
                         target="_blank" class="btn btn-outline-cyber">
                         <i class="fas fa-file-pdf"></i> Brochure
                     </a>
                 </div>
 
             </div>
+
         </div>
     </section>
 
@@ -170,21 +161,20 @@
         <div class="container">
             <p class="sec-label">About Browse</p>
             <div class="about-grid">
-                <div>
+                <div class="fade-up">
                     <!-- for adding a poster of the event -->
+                    <img src="assets/images/poster.png" alt="Browse 2026 Poster" class="about-poster">
                 </div>
                 <!-- Text -->
                 <div class="fade-up">
                     <h2 class="sec-title" style="margin-bottom:1.5rem;">
                         Where Technology<br>Meets <span class="hl">Innovation</span>
                     </h2>
-                    <p class="about-text"
-                        style="font-size:1.05rem;color:var(--text-mid);line-height:1.85;margin-bottom:1rem;">
+                    <p class="about-text">
                         BROWSE 2026 is a premier national-level technical symposium organized by the
                         Associations of CSE, ISE, AI&DS and CSE(AI&ML) at Siddaganga Institute of Technology, Tumakuru.
                     </p>
-                    <p class="about-text"
-                        style="font-size:1.05rem;color:var(--text-mid);line-height:1.85;margin-bottom:2rem;">
+                    <p class="about-text">
                         We bring together the brightest minds in technology to showcase talent,
                         exchange ideas, and explore cutting-edge innovations through a diverse range of
                         challenging and exciting technical events.
@@ -217,12 +207,12 @@
                                     <div class="sit-brand-info">
                                         <div class="sit-title">Siddaganga Institute of Technology</div>
                                         <div class="sit-sub">Tumakuru · Karnataka · India</div>
+                                        <div class="sit-address">B.H. Road, Tumakuru-572103, Karnataka</div>
                                     </div>
+
                                 </div>
 
-                                <div class="sit-address">
-                                    B.H. Road, Tumakuru-572103, Karnataka
-                                </div>
+
 
                                 <div class="sit-contact-links">
                                     <div class="sit-contact-item">
@@ -231,7 +221,7 @@
                                     </div>
                                     <div class="sit-contact-item">
                                         <span class="sit-contact-label">WEBSITE</span>
-                                        <a href="http://browse.sit.ac.in" target="_blank"
+                                        <a href="#" data-link="browseWebsite" target="_blank"
                                             class="sit-contact-value">browse.sit.ac.in</a>
                                     </div>
                                 </div>
@@ -280,9 +270,9 @@
             <div class="section-header fade-up" style="text-align:center;margin-bottom:3rem;">
                 <p class="sec-label">Technical Events</p>
                 <h2 class="sec-title">Choose Your <span class="hl">Arena</span></h2>
-                <p style="color:var(--text-mid);margin-top:0.75rem;font-size:1rem;max-width:520px;margin-inline:auto;">
+                <p class="section-subtitle">
                     8 high-intensity competitions across CSE, ISE, AI&amp;DS and CSE(AI&amp;ML).
-                    One day. One campus. Infinite possibilities.
+                    <br><span style="color: var(--neon-cyan);">One day. One campus. Infinite possibilities.</span>
                 </p>
             </div>
 
@@ -558,9 +548,9 @@
                 </div>
 
                 <div class="tl-item">
-                    <div class="tl-dot" style="background:var(--neon-violet);border-color:var(--neon-violet);"></div>
-                    <div class="tl-card" style="border-color:rgba(180,0,255,0.25);background:rgba(180,0,255,0.04);">
-                        <div class="tl-time" style="color:var(--neon-violet);">02:30 — 04:30 PM</div>
+                    <div class="tl-dot" style="background:var(--neon-blue);border-color:var(--neon-blue);"></div>
+                    <div class="tl-card" style="border-color:rgba(51, 0, 255, 0.25);background:rgba(51, 0, 255, 0.04);">
+                        <div class="tl-time" style="color:var(--neon-blue);">02:00 — 04:30 PM</div>
                         <div class="tl-event">Finals & Valedictory</div>
                         <div class="tl-desc">Finals rounds + prize distribution ceremony</div>
                     </div>
@@ -584,28 +574,60 @@
 
             <div class="branches-grid fade-up">
 
-                <a class="branch-card bc-cse" href="http://sit.ac.in/html/department.php?deptid=6" target="_blank">
-                    <div class="branch-icon-wrap"><i class="fas fa-laptop-code"></i></div>
-                    <div class="branch-abbr">CSE</div>
-                    <div class="branch-full">Computer Science &amp; Engineering</div>
+                <a class="branch-card bc-cse" href="#" data-link="deptCse" target="_blank">
+                    <div class="branch-title-row">
+                        <div class="branch-icon-wrap"><i class="fas fa-laptop-code"></i></div>
+                        <div class="branch-abbr">Computer Science and Engineering</div>
+                    </div>
+                    <div class="branch-full">Builds strong foundations in programming, algorithms, software engineering, and scalable system architecture.</div>
+                    <div class="branch-focus-row">
+                        <span class="branch-focus-chip">Software Systems</span>
+                        <span class="branch-focus-chip">Full Stack</span>
+                        <span class="branch-focus-chip">Problem Solving</span>
+                    </div>
+                    <div class="branch-link-cta">Visit Department <i class="fas fa-arrow-right"></i></div>
                 </a>
 
-                <a class="branch-card bc-ise" href="http://sit.ac.in/html/department.php?deptid=11" target="_blank">
-                    <div class="branch-icon-wrap"><i class="fas fa-network-wired"></i></div>
-                    <div class="branch-abbr">ISE</div>
-                    <div class="branch-full">Information Science &amp; Engineering</div>
+                <a class="branch-card bc-ise" href="#" data-link="deptIse" target="_blank">
+                    <div class="branch-title-row">
+                        <div class="branch-icon-wrap"><i class="fas fa-network-wired"></i></div>
+                        <div class="branch-abbr">Information Science and Engineering</div>
+                    </div>
+                    <div class="branch-full">Focuses on information systems, enterprise-grade software, data management, and modern network infrastructure.</div>
+                    <div class="branch-focus-row">
+                        <span class="branch-focus-chip">Databases</span>
+                        <span class="branch-focus-chip">Cloud Platforms</span>
+                        <span class="branch-focus-chip">Networks</span>
+                    </div>
+                    <div class="branch-link-cta">Visit Department <i class="fas fa-arrow-right"></i></div>
                 </a>
 
-                <a class="branch-card bc-aids" href="http://sit.ac.in/html/department.php?deptid=21" target="_blank">
-                    <div class="branch-icon-wrap"><i class="fas fa-chart-bar"></i></div>
-                    <div class="branch-abbr">AI &amp; DS</div>
-                    <div class="branch-full">Artificial Intelligence &amp; Data Science</div>
+                <a class="branch-card bc-aids" href="#" data-link="deptAids" target="_blank">
+                    <div class="branch-title-row">
+                        <div class="branch-icon-wrap"><i class="fas fa-chart-bar"></i></div>
+                        <div class="branch-abbr">Artificial Intelligence and Data Science</div>
+                    </div>
+                    <div class="branch-full">Develops expertise in machine learning, data analytics, predictive modeling, and intelligent decision-making workflows.</div>
+                    <div class="branch-focus-row">
+                        <span class="branch-focus-chip">Machine Learning</span>
+                        <span class="branch-focus-chip">Data Analytics</span>
+                        <span class="branch-focus-chip">Visualization</span>
+                    </div>
+                    <div class="branch-link-cta">Visit Department <i class="fas fa-arrow-right"></i></div>
                 </a>
 
-                <a class="branch-card bc-aiml" href="http://sit.ac.in/html/department.php?deptid=30" target="_blank">
-                    <div class="branch-icon-wrap"><i class="fas fa-brain"></i></div>
-                    <div class="branch-abbr">CSE (AI&amp;ML)</div>
-                    <div class="branch-full">CSE Artificial Intelligence &amp; Machine Learning</div>
+                <a class="branch-card bc-aiml" href="#" data-link="deptAiml" target="_blank">
+                    <div class="branch-title-row">
+                        <div class="branch-icon-wrap"><i class="fas fa-brain"></i></div>
+                        <div class="branch-abbr">Computer Science and Engineering (Artificial Intelligence and Machine Learning)</div>
+                    </div>
+                    <div class="branch-full">Integrates computer science fundamentals with advanced AI and ML engineering for real-world intelligent products.</div>
+                    <div class="branch-focus-row">
+                        <span class="branch-focus-chip">Deep Learning</span>
+                        <span class="branch-focus-chip">Automation</span>
+                        <span class="branch-focus-chip">AI Engineering</span>
+                    </div>
+                    <div class="branch-link-cta">Visit Department <i class="fas fa-arrow-right"></i></div>
                 </a>
 
             </div>
@@ -650,16 +672,16 @@
                 </div>
 
                 <div>
-                    <a href="https://forms.gle/AJjoC4Zme3sCG2JHA" target="_blank" class="btn btn-cyber"
+                    <a href="#" data-link="registerForm" target="_blank" class="btn btn-cyber"
                         style="font-size:1rem;padding:1rem 2.5rem;">
                         <i class="fas fa-bolt"></i> Register on Google Forms
                     </a>
                 </div>
 
-                <p
-                    style="margin-top:1.5rem;font-family:var(--ff-mono);font-size:0.85rem;color:var(--text-dim);letter-spacing:1px;color: rgba(76, 241, 200, 0.681);">
-                    DIRECT LINK: <a href="https://forms.gle/AJjoC4Zme3sCG2JHA" target="_blank"
-                        style="color: rgb(255, 170, 1);">forms.gle/AJjoC4Zme3sCG2JHA</a>
+                <p class="reg-direct-link"
+                    style="margin-top:1.5rem;font-family:var(--ff-mono);font-size:0.85rem;color:var(--text-dim);letter-spacing:1px;">
+                    DIRECT LINK: <a href="#" data-link="registerForm" target="_blank"
+                        style="color: var(--neon-cyan);">forms.gle/AJjoC4Zme3sCG2JHA</a>
                 </p>
             </div>
 
@@ -681,7 +703,7 @@
             <div class="coord-tiers fade-up">
 
                 <!-- Patrons -->
-                <div class="coord-tier-panel">
+                <div class="coord-tier-panel coord-tier-senior">
                     <div class="coord-tier-head">PATRONS</div>
                     <div class="coord-tier-body">
                         <div class="coord-person">
@@ -696,7 +718,7 @@
                 </div>
 
                 <!-- President & VP -->
-                <div class="coord-tier-panel">
+                <div class="coord-tier-panel coord-tier-senior">
                     <div class="coord-tier-head">PRESIDENT & VICE-PRESIDENT</div>
                     <div class="coord-tier-body">
                         <div class="coord-person">
@@ -771,8 +793,8 @@
                     <div class="cc-icon"><i class="fas fa-envelope"></i></div>
                     <div class="cc-title">EMAIL & WEB</div>
                     <p class="cc-body">
-                        <a href="mailto:browse@sit.ac.in">browse@sit.ac.in</a><br>
-                        <a href="http://browse.sit.ac.in" target="_blank">browse.sit.ac.in</a>
+                        <a href="#" data-link="browseEmail">browse@sit.ac.in</a><br>
+                        <a href="#" data-link="browseWebsite" target="_blank">browse.sit.ac.in</a>
                     </p>
                 </div>
 
@@ -789,7 +811,7 @@
         <div class="footer-inner">
             <div class="footer-brand">
                 <div class="ft-title">BROWSE 2026</div>
-                <p>National Level Technical Symposium<br>SIT Tumakuru · 7 April 2026</p>
+                <p>National Level Technical Symposium
             </div>
             <div class="footer-links">
                 <h5>Navigate</h5>
@@ -819,14 +841,14 @@
             <div class="footer-links">
                 <h5>Quick Links</h5>
                 <ul>
-                    <li><a href="https://forms.gle/AJjoC4Zme3sCG2JHA" target="_blank">Register Now</a></li>
-                    <li><a href="https://drive.google.com/file/d/1y6k1ut-QDxwT8L7Gky0SC9iIGaXXAvJT/view?usp=sharing"
+                    <li><a href="#" data-link="registerForm" target="_blank">Register Now</a></li>
+                    <li><a href="#" data-link="brochure"
                             target="_blank">Download Brochure</a></li>
-                    <li><a href="http://sit.ac.in" target="_blank">SIT Website</a></li>
+                    <li><a href="#" data-link="sitWebsite" target="_blank">SIT Website</a></li>
                 </ul>
             </div>
         </div>
-        <div class="footer-bottom">
+        <div class="footer-bottom" style="text-align: center;">
             <span>© 2026 BROWSE · Siddaganga Institute of Technology. All rights reserved.</span>
 
         </div>
@@ -887,6 +909,7 @@
     </div>
 
     <script src="js/eventsData.js"></script>
+    <script src="js/links.js"></script>
     <script src="js/script.js"></script>
 </body>
 
