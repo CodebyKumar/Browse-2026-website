@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BROWSE 2026 — National Level Technical Symposium | SIT Tumakuru</title>
+    <meta name="description"
+        content="BROWSE 2026 — National Level Technical Symposium hosted by CSE, ISE, AI&DS and CSE(AI&ML) at Siddaganga Institute of Technology, Tumakuru. April 7, 2026.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ╔══════════════════════════════════════════╗ -->
+    <!--   NAVBAR                                     -->
+    <!-- ╚══════════════════════════════════════════╝ -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a class="nav-brand" href="#home">
+                <img src="assets/images/sit-log.jpeg" alt="SIT Logo"
+                    style="height:46px;border-radius:6px;border:1px solid rgba(0,245,255,0.2);">
+                <img src="assets/images/Browse_logo.jpeg" alt="BROWSE Logo"
+                    style="height:46px;border-radius:6px;border:1px solid rgba(0,245,255,0.15);">
+                <div class="brand-label" style="border-left:1px solid rgba(0,245,255,0.15);padding-left:12px;">
+                    <span class="brand-title"
+                        style="font-family:var(--ff-head);font-size:0.75rem;font-weight:800;letter-spacing:0.5px;color:var(--text-bright);text-shadow:none;">Siddaganga
+                        Institute of Technology</span>
+                    <span class="brand-sub"
+                        style="font-family:var(--ff-head);font-size:1rem;letter-spacing:3px;color:var(--neon-cyan);text-shadow:var(--glow-cyan);">BROWSE
+                        2026</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#branches">Branches</a></li>
+                <li><a href="#coordinators">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#register" class="nav-btn">Register</a></li>
+            </ul>
+
+            <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile nav -->
+    <ul class="nav-mobile" id="mobileNav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#branches">Branches</a></li>
+        <li><a href="#coordinators">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://forms.gle/AJjoC4Zme3sCG2JHA" target="_blank" style="color:var(--neon-cyan);">Register Now
+                →</a></li>
+    </ul>
+
+
+    <!-- ╔══════════════════════════════════════════╗ -->
+    <!--   HERO                                       -->
+    <!-- ╚══════════════════════════════════════════╝ -->
+    <section id="home">
+        <div class="hero-grid-floor"></div>
+        <div class="hero-glow-main"></div>
+        <div class="hero-glow-accent"></div>
+
+        <!-- Robot image — right side -->
+        <img src="assets/images/hero-robot.png" alt="Cyberpunk AI Robot" style="
+      position:absolute; right:0; bottom:0;
+      height:min(92vh, 760px); width:auto;
+      object-fit:contain; z-index:1;
+      pointer-events:none;
+      mask-image: linear-gradient(to left, rgba(0,0,0,1) 50%, transparent 100%), linear-gradient(to top, rgba(0,0,0,0.5), transparent 20%);
+      -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 50%, transparent 100%);
+      filter: saturate(1.15) brightness(0.9);
+    ">
+
+        <div class="hero-content z1">
+            <div class="hero-content-inner">
+
+                <!-- Status pill -->
+                <div class="hero-status">
+                    <span class="status-dot"></span>
+                    SYSTEM ONLINE · REGISTRATION OPEN · APRIL 7, 2026
+                </div>
+
+                <!-- Big title -->
+                <h1 class="hero-browse">BROWSE</h1>
+
+
+                <!-- Year bar -->
+                <div class="hero-year-bar">
+                    <span class="sep"></span>
+                    <span>2026</span>
+                    <span class="sep"></span>
+                </div>
+
+                <p class="hero-tagline">
+                    NATIONAL LEVEL TECHNICAL SYMPOSIUM
+                </p>
+                <p class="hero-date">
+                    <i class="fas fa-calendar-alt"></i> 07 APRIL 2026 &nbsp;·&nbsp;
+                    <i class="fas fa-location-dot"></i> SIT, TUMAKURU
+                </p>
+
+                <!-- Countdown -->
+                <div class="countdown">
+                    <div class="cd-box">
+                        <span class="cd-num" id="cd-days">00</span>
+                        <span class="cd-lbl">DAYS</span>
+                    </div>
+                    <span class="cd-sep">:</span>
+                    <div class="cd-box">
+                        <span class="cd-num" id="cd-hours">00</span>
+                        <span class="cd-lbl">HRS</span>
+                    </div>
+                    <span class="cd-sep">:</span>
+                    <div class="cd-box">
+                        <span class="cd-num" id="cd-mins">00</span>
+                        <span class="cd-lbl">MIN</span>
+                    </div>
+                    <span class="cd-sep">:</span>
+                    <div class="cd-box">
+                        <span class="cd-num" id="cd-secs">00</span>
+                        <span class="cd-lbl">SEC</span>
+                    </div>
+                </div>
+
+                <!-- Prize pool -->
+                <div class="prize-strip">
+                    <i class="fas fa-trophy"></i>
+                    PRIZE POOL &nbsp;·&nbsp; ₹75,000 AWAITS
+                </div>
+
+                <!-- CTAs -->
+                <div class="hero-btns">
+                    <a href="https://forms.gle/AJjoC4Zme3sCG2JHA" target="_blank" class="btn btn-cyber">
+                        <i class="fas fa-bolt"></i> Register Now
+                    </a>
+                    <a href="#events" class="btn btn-outline-cyber">
+                        <i class="fas fa-list"></i> View Events
+                    </a>
+                    <a href="https://drive.google.com/file/d/1y6k1ut-QDxwT8L7Gky0SC9iIGaXXAvJT/view?usp=sharing"
+                        target="_blank" class="btn btn-outline-cyber">
+                        <i class="fas fa-file-pdf"></i> Brochure
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ╔══════════════════════════════════════════╗ -->
+    <!--   ABOUT                                      -->
+    <!-- ╚══════════════════════════════════════════╝ -->
+    <section id="about" class="section">
+        <div class="container">
+            <p class="sec-label">About Browse</p>
+            <div class="about-grid">
+                <div>
+                    <!-- for adding a poster of the event -->
+                </div>
+                <!-- Text -->
+                <div class="fade-up">
+                    <h2 class="sec-title" style="margin-bottom:1.5rem;">
+                        Where Technology<br>Meets <span class="hl">Innovation</span>
+                    </h2>
+                    <p class="about-text"
+                        style="font-size:1.05rem;color:var(--text-mid);line-height:1.85;margin-bottom:1rem;">
+                        BROWSE 2026 is a premier national-level technical symposium organized by the
+                        Associations of CSE, ISE, AI&DS and CSE(AI&ML) at Siddaganga Institute of Technology, Tumakuru.
+                    </p>
+                    <p class="about-text"
+                        style="font-size:1.05rem;color:var(--text-mid);line-height:1.85;margin-bottom:2rem;">
+                        We bring together the brightest minds in technology to showcase talent,
+                        exchange ideas, and explore cutting-edge innovations through a diverse range of
+                        challenging and exciting technical events.
+                    </p>
+
+                    <div class="about-stats">
+                        <div class="stat-box fade-up">
+                            <div class="stat-num">8</div>
+                            <div class="stat-l">Events</div>
+                        </div>
+                        <div class="stat-box fade-up">
+                            <div class="stat-num">75K</div>
+                            <div class="stat-l">Prize Pool</div>
+                        </div>
+                        <div class="stat-box fade-up">
+                            <div class="stat-num">4</div>
+                            <div class="stat-l">Departments</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SIT Info Card -->
+                <div class="fade-up" style="grid-column: 1 / -1;">
+                    <div class="sit-panel">
+                        <div class="sit-panel-inner">
+                            <!-- Left Column: Branding & Contact -->
+                            <div class="sit-col-left">
+                                <div class="sit-logo-row">
+                                    <img src="assets/images/sit-log.jpeg" alt="SIT Logo">
+                                    <div class="sit-brand-info">
+                                        <div class="sit-title">Siddaganga Institute of Technology</div>
+                                        <div class="sit-sub">Tumakuru · Karnataka · India</div>
+                                    </div>
+                                </div>
+
+                                <div class="sit-address">
+                                    B.H. Road, Tumakuru-572103, Karnataka
+                                </div>
+
+                                <div class="sit-contact-links">
+                                    <div class="sit-contact-item">
+                                        <span class="sit-contact-label">HOSTNAME</span>
+                                        <span class="sit-contact-value">browse@sit.ac.in</span>
+                                    </div>
+                                    <div class="sit-contact-item">
+                                        <span class="sit-contact-label">WEBSITE</span>
+                                        <a href="http://browse.sit.ac.in" target="_blank"
+                                            class="sit-contact-value">browse.sit.ac.in</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Column: Description & Stats -->
+                            <div class="sit-col-right">
+                                <p class="sit-description">
+                                    A prestigious autonomous institution committed to excellence in
+                                    engineering and technology education since 1963. Consistently
+                                    ranked among India's top technical institutes.
+                                </p>
+
+                                <div class="sit-stats-row">
+                                    <div class="sit-stat-item">
+                                        <div class="sit-stat-num cyan">63</div>
+                                        <div class="sit-stat-label">YEARS</div>
+                                    </div>
+                                    <div class="sit-stat-item">
+                                        <div class="sit-stat-num violet">A++</div>
+                                        <div class="sit-stat-label">NAAC</div>
+                                    </div>
+                                    <div class="sit-stat-item">
+                                        <div class="sit-stat-num green">1963</div>
+                                        <div class="sit-stat-label">FOUNDED</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ╔══════════════════════════════════════════╗ -->
+    <!--   EVENTS                                     -->
+    <!-- ╚══════════════════════════════════════════╝ -->
+    <section id="events" class="section" style="background:var(--bg);">
+        <div class="container">
+
+            <div class="section-header fade-up" style="text-align:center;margin-bottom:3rem;">
+                <p class="sec-label">Technical Events</p>
+                <h2 class="sec-title">Choose Your <span class="hl">Arena</span></h2>
+                <p style="color:var(--text-mid);margin-top:0.75rem;font-size:1rem;max-width:520px;margin-inline:auto;">
+                    8 high-intensity competitions across CSE, ISE, AI&amp;DS and CSE(AI&amp;ML).
+                    One day. One campus. Infinite possibilities.
+                </p>
+            </div>
+
+            <div class="events-grid fade-up">
+
+                <!-- Event 1: Cyber Etymology -->
+                <div class="event-tile ev-1" data-event="ev1">
+                    <div class="event-num">// EVENT 01</div>
+                    <div class="event-icon-big"><i class="fas fa-spell-check"></i></div>
+                    <div class="event-name">CYBER ETYMOLOGY</div>
+                    <p class="event-short">
+                        Derivation of keywords from originals. A high-stakes scrabble battle
+                        focused on technical terms in computer science and electronics.
+                    </p>
+                    <div class="event-tags-row">
+                        <span class="ev-chip">3 MEMBERS</span>
+                        <span class="ev-chip">2 ROUNDS</span>
+                        <span class="ev-chip">ISE DEPT</span>
+                    </div>
+                    <button class="event-explore" data-event="ev1">
+                        EXPLORE <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Event 2: Technical Quiz -->
+                <div class="event-tile ev-2" data-event="ev2">
+                    <div class="event-num">// EVENT 02</div>
+                    <div class="event-icon-big"><i class="fas fa-brain"></i></div>
+                    <div class="event-name">TECHNICAL QUIZ</div>
+                    <p class="event-short">
+                        Facts, personalities, logos and industry trends. Test your depth of knowledge
+                        in the ever-evolving world of computer technology and IT.
+                    </p>
+                    <div class="event-tags-row">
+                        <span class="ev-chip">2 MEMBERS</span>
+                        <span class="ev-chip">2 ROUNDS</span>
+                        <span class="ev-chip">ISE DEPT</span>
+                    </div>
+                    <button class="event-explore" data-event="ev2">
+                        EXPLORE <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Event 3: Witty Byte -->
+                <div class="event-tile ev-3" data-event="ev3">
+                    <div class="event-num">// EVENT 03</div>
+                    <div class="event-icon-big"><i class="fas fa-microphone"></i></div>
+                    <div class="event-name">WITTYBYTE</div>
+                    <p class="event-short">
+                        Tech talk based on scenarios or images given on the spot. Showcase your
+                        wit and technical expertise in this 4-round individual challenge.
+                    </p>
+                    <div class="event-tags-row">
+                        <span class="ev-chip">INDIVIDUAL</span>
+                        <span class="ev-chip">4 ROUNDS</span>
+                        <span class="ev-chip">CSE DEPT</span>
+                    </div>
+                    <button class="event-explore" data-event="ev3">
+                        EXPLORE <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Event 4: Life Extension -->
+                <div class="event-tile ev-4" data-event="ev4">
+                    <div class="event-num">// EVENT 04</div>
+                    <div class="event-icon-big"><i class="fas fa-gamepad"></i></div>
+                    <div class="event-name">LIFE EXTENSION</div>
+                    <p class="event-short">
+                        The ultimate gaming contest. Team up for high-intensity Valorant
+                        and BGMI sessions in custom-designed technical arenas.
+                    </p>
+                    <div class="event-tags-row">
+                        <span class="ev-chip">VALORANT</span>
+                        <span class="ev-chip">BGMI</span>
+                        <span class="ev-chip">MEDIA CENTER</span>
+                    </div>
+                    <button class="event-explore" data-event="ev4">
+                        EXPLORE <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Event 5: Byte Surge -->
+                <div class="event-tile ev-5" data-event="ev5">
+                    <div class="event-num">// EVENT 05</div>
+                    <div class="event-icon-big"><i class="fas fa-terminal"></i></div>
+                    <div class="event-name">BYTE SURGE</div>
+                    <p class="event-short">
+                        A rigorous programming contest in C or C++. Solve complex algorithmic
+                        challenges across two rounds of pure logical combat.
+                    </p>
+                    <div class="event-tags-row">
+                        <span class="ev-chip">2 MEMBERS</span>
+                        <span class="ev-chip">C / C++</span>
+                        <span class="ev-chip">CSE DEPT</span>
+                    </div>
+                    <button class="event-explore" data-event="ev5">
+                        EXPLORE <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Event 6: UI/UX Print -->
+                <div class="event-tile ev-6" data-event="ev6">
+                    <div class="event-num">// EVENT 06</div>
+                    <div class="event-icon-big"><i class="fas fa-pen-ruler"></i></div>
+                    <div class="event-name">UI/UX PRINT</div>
+                    <p class="event-short">
+                        AI-assisted web design challenge. Build intuitive interfaces using
+                        limited prompts while adhering to strict technical constraints.
+                    </p>
+                    <div class="event-tags-row">
+                        <span class="ev-chip">3 MEMBERS</span>
+                        <span class="ev-chip">AI TOOLS</span>
+                        <span class="ev-chip">CSE DEPT</span>
+                    </div>
+                    <button class="event-explore" data-event="ev6">
+                        EXPLORE <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Event 7: Pitchathon -->
+                <div class="event-tile ev-7" data-event="ev7">
+                    <div class="event-num">// EVENT 07</div>
+                    <div class="event-icon-big"><i class="fas fa-chart-line"></i></div>
+                    <div class="event-name">PITCHATHON</div>
+                    <p class="event-short">
+                        Startup idea pitch competition. From core concepts to persuasive video
+                        pitches, present your vision to the tech entrepreneurs of tomorrow.
+                    </p>
+                    <div class="event-tags-row">
+                        <span class="ev-chip">3 MEMBERS</span>
+                        <span class="ev-chip">3 ROUNDS</span>
+                        <span class="ev-chip">CSE DEPT</span>
+                    </div>
+                    <button class="event-explore" data-event="ev7">
+                        EXPLORE <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Event 8: Hyperthon -->
+                <div class="event-tile ev-8" data-event="ev8">
+                    <div class="event-num">// EVENT 08</div>
+                    <div class="event-icon-big"><i class="fas fa-bolt"></i></div>
+                    <div class="event-name">HYPERTHON</div>
+                    <p class="event-short">
+                        Rapid 3-hour build challenge. Leverage AI tools to develop working
+                        prototypes from on-the-spot topics in an individual hackathon.
+                    </p>
+                    <div class="event-tags-row">
+                        <span class="ev-chip">INDIVIDUAL</span>
+                        <span class="ev-chip">3 HOURS</span>
+                        <span class="ev-chip">CSE DEPT</span>
+                    </div>
+                    <button class="event-explore" data-event="ev8">
+                        EXPLORE <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ╔══════════════════════════════════════════╗ -->
+    <!--   SCHEDULE                                   -->
+    <!-- ╚══════════════════════════════════════════╝ -->
+    <section id="schedule" class="section" style="background:var(--bg2);">
+        <div class="container">
+
+            <div class="fade-up" style="text-align:center;margin-bottom:3rem;">
+                <p class="sec-label">Event Timeline</p>
+                <h2 class="sec-title">Day <span class="hl">Schedule</span></h2>
+            </div>
+
+            <div class="sch-date-header fade-up">
+                <div class="sch-date-chip">
+                    <i class="fas fa-calendar-alt"></i>
+                    TUESDAY · 07 APRIL 2026 · SIT TUMAKURU
+                </div>
+            </div>
+
+            <div class="timeline fade-up">
+
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-time">08:30 — 09:00</div>
+                        <div class="tl-event">Registration & Welcome</div>
+                        <div class="tl-desc">Entry, badge collection &amp; inaugural ceremony</div>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-time">09:00 AM</div>
+                        <div class="tl-event">Cyber Etymology</div>
+                        <div class="tl-desc">Research Lab, Dept. of ISE</div>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-time">09:00 AM</div>
+                        <div class="tl-event">Technical Quiz</div>
+                        <div class="tl-desc">Koutilya Lab, Dept. of ISE</div>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-time">09:00 AM</div>
+                        <div class="tl-event">Byte Surge</div>
+                        <div class="tl-desc">RCC Lab, Dept. of CSE</div>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-time">09:00 AM</div>
+                        <div class="tl-event">Life Extension</div>
+                        <div class="tl-desc">Media Center / MBA Block</div>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-time">09:00 AM</div>
+                        <div class="tl-event">Witty Byte</div>
+                        <div class="tl-desc">Project Lab, Dept. of CSE</div>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-time">09:00 AM</div>
+                        <div class="tl-event">UI/UX Print</div>
+                        <div class="tl-desc">Linux Laboratory, Dept. of CSE</div>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-time">09:00 AM</div>
+                        <div class="tl-event">Pitchathon</div>
+                        <div class="tl-desc">Kalpana Chawla Lab, Dept. of CSE</div>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-time">09:00 AM</div>
+                        <div class="tl-event">Hyperthon</div>
+                        <div class="tl-desc">Aryabhatta Computer Centre, Dept. of CSE</div>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot"
+                        style="background:var(--neon-green);border-color:var(--neon-green);box-shadow:0 0 12px rgba(57,255,20,0.7);">
+                    </div>
+                    <div class="tl-card" style="border-color:rgba(57,255,20,0.25);background:rgba(57,255,20,0.04);">
+                        <div class="tl-time" style="color:var(--neon-green);">01:00 PM</div>
+                        <div class="tl-event">Lunch Break</div>
+                        <div class="tl-desc">Refreshments &amp; networking</div>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot" style="background:var(--neon-violet);border-color:var(--neon-violet);"></div>
+                    <div class="tl-card" style="border-color:rgba(180,0,255,0.25);background:rgba(180,0,255,0.04);">
+                        <div class="tl-time" style="color:var(--neon-violet);">02:30 — 04:30 PM</div>
+                        <div class="tl-event">Finals & Valedictory</div>
+                        <div class="tl-desc">Finals rounds + prize distribution ceremony</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ╔══════════════════════════════════════════╗ -->
+    <!--   BRANCHES                                   -->
+    <!-- ╚══════════════════════════════════════════╝ -->
+    <section id="branches" class="section" style="background:var(--bg);">
+        <div class="container">
+
+            <div class="fade-up" style="text-align:center;margin-bottom:3rem;">
+                <p class="sec-label">Departments</p>
+                <h2 class="sec-title">Participating <span class="hl">Branches</span></h2>
+            </div>
+
+            <div class="branches-grid fade-up">
+
+                <a class="branch-card bc-cse" href="http://sit.ac.in/html/department.php?deptid=6" target="_blank">
+                    <div class="branch-icon-wrap"><i class="fas fa-laptop-code"></i></div>
+                    <div class="branch-abbr">CSE</div>
+                    <div class="branch-full">Computer Science &amp; Engineering</div>
+                </a>
+
+                <a class="branch-card bc-ise" href="http://sit.ac.in/html/department.php?deptid=11" target="_blank">
+                    <div class="branch-icon-wrap"><i class="fas fa-network-wired"></i></div>
+                    <div class="branch-abbr">ISE</div>
+                    <div class="branch-full">Information Science &amp; Engineering</div>
+                </a>
+
+                <a class="branch-card bc-aids" href="http://sit.ac.in/html/department.php?deptid=21" target="_blank">
+                    <div class="branch-icon-wrap"><i class="fas fa-chart-bar"></i></div>
+                    <div class="branch-abbr">AI &amp; DS</div>
+                    <div class="branch-full">Artificial Intelligence &amp; Data Science</div>
+                </a>
+
+                <a class="branch-card bc-aiml" href="http://sit.ac.in/html/department.php?deptid=30" target="_blank">
+                    <div class="branch-icon-wrap"><i class="fas fa-brain"></i></div>
+                    <div class="branch-abbr">CSE (AI&amp;ML)</div>
+                    <div class="branch-full">CSE Artificial Intelligence &amp; Machine Learning</div>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ╔══════════════════════════════════════════╗ -->
+    <!--   REGISTER                                   -->
+    <!-- ╚══════════════════════════════════════════╝ -->
+    <section id="register" class="section" style="background:var(--bg2);">
+        <div class="container">
+
+            <div class="reg-box fade-up">
+                <p class="sec-label" style="justify-content:center;margin-bottom:1rem;">Registration</p>
+                <h2 class="sec-title" style="margin-bottom:0.5rem;">Ready to <span class="hl">Compete?</span></h2>
+
+
+                <div class="reg-info-row">
+                    <div class="reg-chip">
+                        <i class="fas fa-calendar-alt"></i>
+                        <strong>Date:</strong> 07 April 2026 (Tuesday)
+                    </div>
+                    <div class="reg-chip">
+                        <i class="fas fa-calendar-alt"></i>
+                        <strong>Time:</strong> 09:00 AM onwards
+                    </div>
+                    <div class="reg-chip">
+                        <i class="fas fa-location-dot"></i>
+                        <strong>Venue:</strong> SIT Tumakuru
+                    </div>
+                    <div class="reg-chip">
+                        <i class="fas fa-ticket"></i>
+                        <strong>Mode:</strong> National Level
+                    </div>
+                </div>
+
+                <div class="fee-tag">
+                    <i class="fas fa-indian-rupee-sign"></i>
+                    REGISTRATION FEE: ₹50 PER PERSON
+                </div>
+
+                <div>
+                    <a href="https://forms.gle/AJjoC4Zme3sCG2JHA" target="_blank" class="btn btn-cyber"
+                        style="font-size:1rem;padding:1rem 2.5rem;">
+                        <i class="fas fa-bolt"></i> Register on Google Forms
+                    </a>
+                </div>
+
+                <p
+                    style="margin-top:1.5rem;font-family:var(--ff-mono);font-size:0.85rem;color:var(--text-dim);letter-spacing:1px;color: rgba(76, 241, 200, 0.681);">
+                    DIRECT LINK: <a href="https://forms.gle/AJjoC4Zme3sCG2JHA" target="_blank"
+                        style="color: rgb(255, 170, 1);">forms.gle/AJjoC4Zme3sCG2JHA</a>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ╔══════════════════════════════════════════╗ -->
+    <!--   COORDINATORS                               -->
+    <!-- ╚══════════════════════════════════════════╝ -->
+    <section id="coordinators" class="section" style="background:var(--bg);">
+        <div class="container">
+
+            <div class="fade-up" style="text-align:center;margin-bottom:3rem;">
+                <p class="sec-label">Leadership</p>
+                <h2 class="sec-title">Core <span class="hl">Team</span></h2>
+            </div>
+
+            <div class="coord-tiers fade-up">
+
+                <!-- Patrons -->
+                <div class="coord-tier-panel">
+                    <div class="coord-tier-head">PATRONS</div>
+                    <div class="coord-tier-body">
+                        <div class="coord-person">
+                            <div class="coord-cname">Prof. Shivakumaraiah</div>
+                            <div class="coord-crole">CEO</div>
+                        </div>
+                        <div class="coord-person">
+                            <div class="coord-cname">Prof. S V Dinesh</div>
+                            <div class="coord-crole">Principal</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- President & VP -->
+                <div class="coord-tier-panel">
+                    <div class="coord-tier-head">PRESIDENT & VICE-PRESIDENT</div>
+                    <div class="coord-tier-body">
+                        <div class="coord-person">
+                            <div class="coord-cname">Prof. R Aparna</div>
+                            <div class="coord-crole">President · HOD, ISE</div>
+                        </div>
+                        <div class="coord-person">
+                            <div class="coord-cname">Prof. N R Sunitha</div>
+                            <div class="coord-crole">Vice-President · HOD, CSE</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student Coordinators -->
+                <div class="coord-tier-panel">
+                    <div class="coord-tier-head">STUDENT COORDINATORS — CORE</div>
+                    <div class="coord-tier-body">
+                        <div class="coord-person">
+                            <div class="coord-cname">Tushar M Sagur</div>
+                            <div class="coord-crole">Student Coordinator</div>
+                        </div>
+                        <div class="coord-person">
+                            <div class="coord-cname">Abrar Azeem</div>
+                            <div class="coord-crole">Student Coordinator</div>
+                        </div>
+                        <div class="coord-person">
+                            <div class="coord-cname">Tarun R</div>
+                            <div class="coord-crole">Student Coordinator</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ╔══════════════════════════════════════════╗ -->
+    <!--   CONTACT                                    -->
+    <!-- ╚══════════════════════════════════════════╝ -->
+    <section id="contact" class="section" style="background:var(--bg2);">
+        <div class="container">
+
+            <div class="fade-up" style="text-align:center;margin-bottom:3rem;">
+                <p class="sec-label">Contact</p>
+                <h2 class="sec-title">Get in <span class="hl">Touch</span></h2>
+            </div>
+
+            <div class="contact-grid fade-up">
+
+                <div class="contact-cell">
+                    <div class="cc-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="cc-title">LOCATION</div>
+                    <p class="cc-body">
+                        Siddaganga Institute of Technology<br>
+                        B.H. Road, Tumakuru-572103<br>
+                        Karnataka, India
+                    </p>
+                </div>
+
+                <div class="contact-cell">
+                    <div class="cc-icon"><i class="fas fa-users"></i></div>
+                    <div class="cc-title">STUDENT COORDINATORS</div>
+                    <p class="cc-body">
+                        Tushar M Sagur: +91 99724 01255<br>
+                        Abrar Azeem: +91 88677 37265<br>
+                        Tarun R: +91 99729 09371
+                    </p>
+                </div>
+
+                <div class="contact-cell">
+                    <div class="cc-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="cc-title">EMAIL & WEB</div>
+                    <p class="cc-body">
+                        <a href="mailto:browse@sit.ac.in">browse@sit.ac.in</a><br>
+                        <a href="http://browse.sit.ac.in" target="_blank">browse.sit.ac.in</a>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ╔══════════════════════════════════════════╗ -->
+    <!--   FOOTER                                     -->
+    <!-- ╚══════════════════════════════════════════╝ -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="ft-title">BROWSE 2026</div>
+                <p>National Level Technical Symposium<br>SIT Tumakuru · 7 April 2026</p>
+            </div>
+            <div class="footer-links">
+                <h5>Navigate</h5>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#branches">Branches</a></li>
+                    <li><a href="#register">Register</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h5>Events</h5>
+                <ul>
+                    <li><a href="#events" data-event="ev1" style="cursor:pointer;">Cyber Etymology</a></li>
+                    <li><a href="#events" data-event="ev2" style="cursor:pointer;">Technical Quiz</a></li>
+                    <li><a href="#events" data-event="ev3" style="cursor:pointer;">Witty Byte</a></li>
+                    <li><a href="#events" data-event="ev4" style="cursor:pointer;">Life Extension</a></li>
+                    <li><a href="#events" data-event="ev5" style="cursor:pointer;">Byte Surge</a></li>
+                    <li><a href="#events" data-event="ev6" style="cursor:pointer;">UI/UX Print</a></li>
+                    <li><a href="#events" data-event="ev7" style="cursor:pointer;">Pitchathon</a></li>
+                    <li><a href="#events" data-event="ev8" style="cursor:pointer;">Hyperthon</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="https://forms.gle/AJjoC4Zme3sCG2JHA" target="_blank">Register Now</a></li>
+                    <li><a href="https://drive.google.com/file/d/1y6k1ut-QDxwT8L7Gky0SC9iIGaXXAvJT/view?usp=sharing"
+                            target="_blank">Download Brochure</a></li>
+                    <li><a href="http://sit.ac.in" target="_blank">SIT Website</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 BROWSE · Siddaganga Institute of Technology. All rights reserved.</span>
+
+        </div>
+    </footer>
+
+
+    <!-- ╔══════════════════════════════════════════╗ -->
+    <!--   MODAL                                      -->
+    <!-- ╚══════════════════════════════════════════╝ -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-box" id="modalBox">
+
+            <!-- Top color bar -->
+            <div class="modal-header-bar"></div>
+
+            <!-- Close -->
+            <button class="modal-close-btn" id="modalCloseBtn">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <!-- Header -->
+            <div class="modal-header">
+                <div class="modal-icon-lg"></div>
+                <span class="modal-ev-tag">EVENT TAG</span>
+                <h2 class="modal-ev-name">EVENT NAME</h2>
+                <p class="modal-ev-sub">Event subtitle</p>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+
+                <!-- Rules -->
+                <div class="modal-section">
+                    <div class="modal-sec-label">// RULES &amp; FORMAT</div>
+                    <ul class="modal-rules-list">
+                        <!-- Filled by JS -->
+                    </ul>
+                </div>
+
+                <!-- Info chips -->
+                <div class="modal-section">
+                    <div class="modal-sec-label">// EVENT INFO</div>
+                    <div class="modal-info-chips">
+                        <!-- Filled by JS -->
+                    </div>
+                </div>
+
+                <!-- Coordinators -->
+                <div class="modal-section">
+                    <div class="modal-sec-label">// COORDINATORS</div>
+                    <div class="modal-coords-grid">
+                        <!-- Filled by JS -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/eventsData.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

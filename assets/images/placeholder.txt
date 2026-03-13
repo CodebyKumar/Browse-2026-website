@@ -1,0 +1,9 @@
+This directory should contain the following images:
+
+1. logo.png - The BROWSE 2025 logo
+2. hero-bg.jpg - Background image for the hero section
+3. about-image.jpg - Image for the about section
+4. qr-code.png - QR code for registration
+5. sponsor1.png through sponsor6.png - Sponsor logos
+
+You should add real images to make the website fully functional. 

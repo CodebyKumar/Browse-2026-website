@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - CSE Department</title>
+    <link rel="stylesheet" href="css/events-animations.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Events Section -->
+    <section class="events">
+        <div class="events-header" style="text-align:center; margin-bottom:2rem;">
+            <h2>BROWSE 2025</h2>
+            <h3>A National Level Technical Symposium</h3>
+            <div style="font-size:1.3rem; margin:0.5rem 0; color:#FFD700;">20th May 2025</div>
+            <div style="font-size:1.5rem; font-weight:bold; color:#00FF99;">Prize Pool: Rs. 75,000/-</div>
+            <div style="margin-top:0.5rem; color:#00BCD4;">For more details visit: <a href="https://browse.sit.ac.in"
+                    target="_blank">www.browse.sit.ac.in</a></div>
+        </div>
+        <div class="events-grid">
+            <!-- Cyber Etymology -->
+            <div class="event-card cyber-etymology">
+                <div class="event-content">
+                    <div class="event-icon">
+                        <div id="cyber-etymology-animation" class="lottie-container"></div>
+                    </div>
+                    <h3>Cyber Etymology</h3>
+                    <p>Derivation of words from originals</p>
+                    <a href="#" class="event-details">Explore</a>
+                </div>
+            </div>
+            <!-- Technical Quiz -->
+            <div class="event-card technical-quiz">
+                <div class="event-content">
+                    <div class="event-icon">
+                        <div id="technical-quiz-animation" class="lottie-container"></div>
+                    </div>
+                    <h3>Technical Quiz</h3>
+                    <p>Quiz on IT aspects</p>
+                    <a href="#" class="event-details">Explore</a>
+                </div>
+            </div>
+            <!-- Witty Byte -->
+            <div class="event-card witty-byte">
+                <div class="event-content">
+                    <div class="event-icon">
+                        <div id="witty-byte-animation" class="lottie-container"></div>
+                    </div>
+                    <h3>Witty Byte</h3>
+                    <p>Tech talk</p>
+                    <a href="#" class="event-details">Explore</a>
+                </div>
+            </div>
+            <!-- Life Extension -->
+            <div class="event-card life-extension">
+                <div class="event-content">
+                    <div class="event-icon">
+                        <div id="life-extension-animation" class="lottie-container"></div>
+                    </div>
+                    <h3>Life Extension</h3>
+                    <p>Valorant &amp; BGMI</p>
+                    <a href="#" class="event-details">Explore</a>
+                </div>
+            </div>
+            <!-- Byte Surge -->
+            <div class="event-card byte-surge">
+                <div class="event-content">
+                    <div class="event-icon">
+                        <div id="byte-surge-animation" class="lottie-container"></div>
+                    </div>
+                    <h3>Byte Surge</h3>
+                    <p>Programming Contest</p>
+                    <a href="#" class="event-details">Explore</a>
+                </div>
+            </div>
+            <!-- UI/UX Print (NEW) -->
+            <div class="event-card uiux-print">
+                <div class="event-content">
+                    <div class="event-icon">
+                        <div id="uiux-print-animation" class="lottie-container"></div>
+                    </div>
+                    <h3>UI/UX Print <span class="new-badge">NEW</span></h3>
+                    <p>Building Web pages</p>
+                    <a href="#" class="event-details">Explore</a>
+                </div>
+            </div>
+            <!-- Pitchathon (NEW) -->
+            <div class="event-card pitchathon">
+                <div class="event-content">
+                    <div class="event-icon">
+                        <div id="pitchathon-animation" class="lottie-container"></div>
+                    </div>
+                    <h3>Pitchathon <span class="new-badge">NEW</span></h3>
+                    <p>Idea Presentations</p>
+                    <a href="#" class="event-details">Explore</a>
+                </div>
+            </div>
+            <!-- Hyperthon (NEW) -->
+            <div class="event-card hyperthon">
+                <div class="event-content">
+                    <div class="event-icon">
+                        <div id="hyperthon-animation" class="lottie-container"></div>
+                    </div>
+                    <h3>Hyperthon <span class="new-badge">NEW</span></h3>
+                    <p>A 3 hour Hackathon</p>
+                    <a href="#" class="event-details">Explore</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Lottie Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+
+    <!-- Initialize Lottie Animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Cyber Etymology - Typewriter/Text Animation
+            lottie.loadAnimation({
+                container: document.getElementById('cyber-etymology-animation'),
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: 'https://assets2.lottiefiles.com/packages/lf20_49rdyysj.json' // Replace with typewriter/floating text animation
+            });
+            // Technical Quiz - Question Mark Animation
+            lottie.loadAnimation({
+                container: document.getElementById('technical-quiz-animation'),
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: 'https://assets4.lottiefiles.com/packages/lf20_ydo1amjm.json' // Question mark animation
+            });
+            // Witty Byte - Tech Talk Animation
+            lottie.loadAnimation({
+                container: document.getElementById('witty-byte-animation'),
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: 'https://assets2.lottiefiles.com/packages/lf20_2ks3pjua.json' // Microphone or talk animation
+            });
+            // Life Extension - Gaming Controller Animation
+            lottie.loadAnimation({
+                container: document.getElementById('life-extension-animation'),
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: 'https://assets3.lottiefiles.com/packages/lf20_ydo1amjm.json' // Gaming controller animation
+            });
+            // Byte Surge - Coding Animation
+            lottie.loadAnimation({
+                container: document.getElementById('byte-surge-animation'),
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: 'https://assets2.lottiefiles.com/packages/lf20_49rdyysj.json' // Coding animation
+            });
+            // UI/UX Print - Web Design Animation
+            lottie.loadAnimation({
+                container: document.getElementById('uiux-print-animation'),
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: 'https://assets2.lottiefiles.com/packages/lf20_1pxqjqps.json' // Web design animation
+            });
+            // Pitchathon - Idea/Presentation Animation
+            lottie.loadAnimation({
+                container: document.getElementById('pitchathon-animation'),
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: 'https://assets5.lottiefiles.com/packages/lf20_ydo1amjm.json' // Presentation animation
+            });
+            // Hyperthon - Hackathon Animation
+            lottie.loadAnimation({
+                container: document.getElementById('hyperthon-animation'),
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: 'https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json' // Hackathon animation
+            });
+        });
+    </script>
+</body>
+
+</html>
