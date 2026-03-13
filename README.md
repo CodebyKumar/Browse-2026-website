@@ -1,75 +1,111 @@
-# BROWSE 2025 Website
+# BROWSE 2026 Website
 
-A modern, responsive website for the BROWSE 2025 National Level Technical Symposium organized by Siddaganga Institute of Technology.
+Official website for BROWSE 2026, a national-level technical symposium hosted at Siddaganga Institute of Technology, Tumakuru.
 
 ## Overview
 
-This website showcases the BROWSE 2025 technical symposium with a futuristic design that's completely different from the original poster. The site features:
+This is a static frontend project (no build step) built with HTML, CSS, and vanilla JavaScript.
 
-- Modern, responsive design with a dark theme
-- Interactive elements including animations and a countdown timer
-- Information about the symposium events, schedule, and registration
-- Cross-browser compatibility
-- Optimized performance
+The site includes:
 
-## Technologies Used
+- Hero section with countdown and CTA links
+- About, schedule, branches, coordinators, and contact sections
+- Event tiles with modal-based event details
+- Centralized link handling through a single JavaScript file
+- Responsive layout for desktop and mobile
+
+## Tech Stack
 
 - HTML5
-- CSS3 (with CSS variables, flexbox, grid, and modern animations)
-- Vanilla JavaScript (no frameworks or libraries required)
-- Font Awesome icons
-- Google Fonts (Orbitron and Montserrat)
+- CSS3
+- Vanilla JavaScript
+- Font Awesome (CDN)
+- Google Fonts (Bruno Ace SC, Exo 2, Space Mono)
 
-## Features
-
-- **Responsive Design**: Fully responsive layout that works on all devices
-- **Interactive Countdown**: Live countdown to the event date
-- **Particle Animation**: Dynamic particle animation in the hero section
-- **Scroll Animations**: Elements animate into view as you scroll
-- **Mobile-Friendly Navigation**: Hamburger menu for smaller screens
-- **Registration Forms**: Forms for event registration and contact
-- **Modern UI Components**: Cards, timeline, and other modern UI elements
-
-## File Structure
+## Project Structure
 
 ```
-browse-2025-website/
-├── index.html          # Main HTML file
-├── styles.css          # CSS styles
-├── script.js           # JavaScript functionality
-├── img/                # Image assets
-│   ├── logo.png
-│   ├── hero-bg.jpg
-│   ├── about-image.jpg
-│   ├── qr-code.png
-│   └── sponsors/       # Sponsor logos
-├── README.md           # This file
+Browse_2026/
+├── index.html
+├── events.html
+├── README.md
+├── developer.md
+├── server.py
+├── assets/
+│   └── images/
+├── css/
+│   ├── styles.css
+│   ├── style.css
+│   ├── chatbot.css
+│   ├── branch-animations.css
+│   ├── events-animations.css
+│   ├── robot-animation.css
+│   └── cse-background.css
+└── js/
+	├── script.js
+	├── links.js
+	├── eventsData.js
+	├── chatbot.js
+	├── branch-animations.js
+	├── events-animations.js
+	├── robot-animation.js
+	└── cse-background.js
 ```
 
-## Setup and Usage
+## Quick Start
 
-1. Clone or download this repository
-2. Open `index.html` in your web browser
-3. No server or build process required
+1. Clone or download the project.
+2. Open `index.html` directly in a browser, or run a local server.
+3. Optional local server:
 
-## Required Images
+```bash
+python3 server.py
+```
 
-For the website to display correctly, you'll need to add the following images to the `img` directory:
+## Content Update Guide
 
-- `logo.png` - The BROWSE 2025 logo
-- `hero-bg.jpg` - Background image for the hero section
-- `about-image.jpg` - Image for the about section
-- `qr-code.png` - QR code for registration
-- Sponsor logos (sponsor1.png through sponsor6.png)
+### 1. Update links in one place
 
-## Browser Compatibility
+All external URLs are centralized in:
 
-The website is compatible with:
-- Google Chrome (latest)
-- Mozilla Firefox (latest)
-- Microsoft Edge (latest)
-- Safari (latest)
+- `js/links.js`
+
+Every anchor with `data-link="..."` in HTML gets its `href` from this map automatically. To change registration form, brochure, website, or department links, edit only `js/links.js`.
+
+### 2. Update event modal content
+
+All event modal content is defined in:
+
+- `js/eventsData.js`
+
+Each event key (`ev1`, `ev2`, etc.) contains icon, title, subtitle, rules, info chips, and coordinator details.
+
+### 3. Keep script load order
+
+On pages that show event modals and mapped links (like `index.html`), scripts should load in this order:
+
+1. `js/eventsData.js`
+2. `js/links.js`
+3. `js/script.js`
+
+This ensures data is available before UI binding happens.
+
+## Maintainer Notes
+
+- Prefer editing `js/links.js` instead of hardcoding URLs in HTML.
+- Prefer editing `js/eventsData.js` instead of hardcoding modal content in HTML.
+- Use `css/styles.css` as the primary stylesheet for the main landing page layout.
+- After making updates, verify desktop and mobile views.
+
+## Browser Support
+
+Tested for modern versions of:
+
+- Google Chrome
+- Mozilla Firefox
+- Microsoft Edge
+- Safari
 
 ## License
 
-This project is open source and available for educational and non-commercial use. 
+For educational and institutional event usage.
