@@ -2,110 +2,35 @@
 
 Official website for BROWSE 2026, a national-level technical symposium hosted at Siddaganga Institute of Technology, Tumakuru.
 
-## Overview
+## About The Website
 
-This is a static frontend project (no build step) built with HTML, CSS, and vanilla JavaScript.
+The BROWSE 2026 website presents the symposium identity, event highlights, schedule, branches, core team, registration pathway, and contact information in a single responsive experience.
 
-The site includes:
+It is designed to communicate clarity, credibility, and technical energy for a professional symposium audience.
 
-- Hero section with countdown and CTA links
-- About, schedule, branches, coordinators, and contact sections
-- Event tiles with modal-based event details
-- Centralized link handling through a single JavaScript file
-- Responsive layout for desktop and mobile
+## Theme & Visual Direction
 
-## Tech Stack
+The website follows a futuristic technical theme inspired by a cyber-aesthetic language.
 
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- Font Awesome (CDN)
-- Google Fonts (Bruno Ace SC, Exo 2, Space Mono)
+Core style characteristics:
 
-## Project Structure
+- Dark matte background layers with electric cyan and blue accents
+- Neon-inspired highlights, glows, and thin grid textures
+- Bold, clean typography with strong section hierarchy
+- Motion-led reveals and subtle interaction feedback
+- Responsive presentation for desktop and mobile screens
 
-```
-Browse_2026/
-├── index.html
-├── events.html
-├── README.md
-├── developer.md
-├── server.py
-├── assets/
-│   └── images/
-├── css/
-│   ├── styles.css
-│   ├── style.css
-│   ├── chatbot.css
-│   ├── branch-animations.css
-│   ├── events-animations.css
-│   ├── robot-animation.css
-│   └── cse-background.css
-└── js/
-	├── script.js
-	├── links.js
-	├── eventsData.js
-	├── chatbot.js
-	├── branch-animations.js
-	├── events-animations.js
-	├── robot-animation.js
-	└── cse-background.js
-```
+## Experience Highlights
 
-## Quick Start
+- Hero-led introduction with countdown and call-to-action
+- Structured information flow: About, Events, Schedule, Branches, Core Team, Contact
+- Interactive event cards and detailed event views
+- Consistent visual identity across sections
 
-1. Clone or download the project.
-2. Open `index.html` directly in a browser, or run a local server.
-3. Optional local server:
+## Event Context
 
-```bash
-python3 server.py
-```
+BROWSE 2026 brings together student talent from multiple departments through competitive technical events, innovation-focused participation, and coordinated institutional leadership.
 
-## Content Update Guide
+## Usage
 
-### 1. Update links in one place
-
-All external URLs are centralized in:
-
-- `js/links.js`
-
-Every anchor with `data-link="..."` in HTML gets its `href` from this map automatically. To change registration form, brochure, website, or department links, edit only `js/links.js`.
-
-### 2. Update event modal content
-
-All event modal content is defined in:
-
-- `js/eventsData.js`
-
-Each event key (`ev1`, `ev2`, etc.) contains icon, title, subtitle, rules, info chips, and coordinator details.
-
-### 3. Keep script load order
-
-On pages that show event modals and mapped links (like `index.html`), scripts should load in this order:
-
-1. `js/eventsData.js`
-2. `js/links.js`
-3. `js/script.js`
-
-This ensures data is available before UI binding happens.
-
-## Maintainer Notes
-
-- Prefer editing `js/links.js` instead of hardcoding URLs in HTML.
-- Prefer editing `js/eventsData.js` instead of hardcoding modal content in HTML.
-- Use `css/styles.css` as the primary stylesheet for the main landing page layout.
-- After making updates, verify desktop and mobile views.
-
-## Browser Support
-
-Tested for modern versions of:
-
-- Google Chrome
-- Mozilla Firefox
-- Microsoft Edge
-- Safari
-
-## License
-
-For educational and institutional event usage.
+For educational and institutional event communication.

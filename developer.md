@@ -16,6 +16,7 @@ This document helps future developers update and maintain the BROWSE 2026 websit
 - `js/script.js`: Main interactions (navbar, countdown, modal system, animations)
 - `js/eventsData.js`: Event modal data source
 - `js/links.js`: Centralized links handler
+- `js/core-team.js`: Core Team + Contact content data source
 
 ## 3) Links Handler (Important)
 
@@ -97,11 +98,44 @@ For pages using both links and event modal data, keep this order:
 
 1. `js/eventsData.js`
 2. `js/links.js`
-3. `js/script.js`
+3. `js/core-team.js`
+4. `js/script.js`
 
 `index.html` currently follows this order near the bottom of the file.
 
-## 7) Common Update Tasks
+## 7) Core Team + Contact Data Source (Important)
+
+Core Team leadership and Get in Touch content are now JS-driven via `js/core-team.js`.
+
+### How it works
+
+- `coreTeamData` stores:
+  - `patrons`
+  - `leadership`
+  - `studentCoordinators` (name, role, phone)
+  - `contact` (location lines, email/web labels and links)
+- `core-team.js` renders into these HTML target IDs:
+  - `corePatrons`
+  - `coreLeads`
+  - `coreStudentCoordinators`
+  - `contactLocationBody`
+  - `contactStudentCoordinatorsBody`
+  - `contactEmailWebBody`
+
+### Rules for future updates
+
+- Do not hardcode patrons, leadership, or coordinator rows in `index.html`.
+- Do not hardcode Get in Touch location/coordinator/email-web body text in `index.html`.
+- Edit only the `coreTeamData` object in `js/core-team.js` for these content changes.
+- Keep target IDs in `index.html` unchanged unless you also update renderer IDs in `js/core-team.js`.
+
+### Runtime helper APIs
+
+- `window.CORE_TEAM_DATA`: data object exposed for quick inspection/update.
+- `window.renderCoreTeamData()`: re-renders all Core Team + Contact blocks.
+- `window.updateCoreStudentCoordinators(list)`: updates only student coordinators and re-renders.
+
+## 8) Common Update Tasks
 
 ### Change registration form link
 
@@ -119,27 +153,42 @@ For pages using both links and event modal data, keep this order:
 
 - Edit the relevant event block in `js/eventsData.js`
 
+### Update patrons / president / vice-president
+
+- Edit `coreTeamData.patrons` and `coreTeamData.leadership` in `js/core-team.js`
+
+### Update student coordinators in Core Team + Contact
+
+- Edit `coreTeamData.studentCoordinators` in `js/core-team.js`
+- `phone` values are automatically shown in Get in Touch under STUDENT COORDINATORS
+
+### Update contact location / email / website text
+
+- Edit `coreTeamData.contact` in `js/core-team.js`
+
 ### Change countdown target date/time
 
 - Edit `target` in `updateCountdown()` inside `js/script.js`
 
-## 8) Styling Guidance
+## 9) Styling Guidance
 
 - Primary stylesheet for main page is `css/styles.css`.
 - Verify mobile breakpoints after style edits (`992px`, `768px`, `480px` areas are commonly used).
 - Avoid duplicating conflicting rules in multiple media blocks unless necessary.
 
-## 9) QA Checklist Before Release
+## 10) QA Checklist Before Release
 
 - Check all `data-link` anchors open correct URLs
 - Open each event tile and validate modal content
+- Validate Core Team renders patrons, leadership, and student coordinators from JS data
+- Validate Get in Touch values render from `js/core-team.js` (location, coordinators, email/web)
 - Verify layout on desktop and mobile widths
 - Confirm no console errors in browser dev tools
 - Confirm hero, about, register, and footer alignment
 
-## 10) Recommended Workflow
+## 11) Recommended Workflow
 
-1. Update content data files first (`js/links.js`, `js/eventsData.js`).
+1. Update content data files first (`js/links.js`, `js/eventsData.js`, `js/core-team.js`).
 2. Update HTML only for structure/UI changes.
 3. Adjust CSS last for visual polish.
 4. Re-test all sections after each change set.
