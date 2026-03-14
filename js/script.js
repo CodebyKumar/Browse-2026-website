@@ -136,12 +136,40 @@ const overlay = document.getElementById('modalOverlay');
 const modalBox = document.getElementById('modalBox');
 const closeBtn = document.getElementById('modalCloseBtn');
 
+function normalizeCoordinators(raw, role = 'student') {
+    if (Array.isArray(raw)) return raw;
+    if (typeof raw !== 'string' || !raw.trim()) return [];
+
+    const lines = raw.split('\n').map(l => l.trim()).filter(Boolean);
+
+    // Legacy faculty format: first line name, second line phone.
+    if (role === 'faculty' && lines.length >= 2 && !lines[0].includes(' - ')) {
+        return [{ name: lines[0], contact: lines.slice(1).join(' / ') }];
+    }
+
+    return lines.map(line => {
+        const [namePart, ...contactParts] = line.split(' - ');
+        return {
+            name: (namePart || '').trim(),
+            contact: contactParts.join(' - ').trim(),
+        };
+    });
+}
+
+function renderCoordinatorList(items) {
+    return items.map(item => `
+      <div class="mc-entry">
+        <div class="mc-name">${item.name || ''}</div>
+        ${item.contact ? `<div class="mc-phone">${item.contact}</div>` : ''}
+      </div>
+    `).join('');
+}
+
 function openModal(evKey) {
     const evData = window.events ? window.events[evKey] : null;
     if (!evData || !modalBox || !overlay) return;
 
-    const header = modalBox.querySelector('.modal-header-bar');
-    if (header) header.style.background = `linear-gradient(90deg, ${evData.color}, #b400ff)`;
+    modalBox.style.setProperty('--modal-event', evData.color || 'var(--neon-cyan)');
 
     const iconLg = modalBox.querySelector('.modal-icon-lg');
     if (iconLg) iconLg.innerHTML = evData.icon;
@@ -170,8 +198,18 @@ function openModal(evKey) {
     // Coordinators
     const grid = modalBox.querySelector('.modal-coords-grid');
     if (grid) {
-        const studentLines = evData.student.split('\n').map(l => `<div class="mc-name">${l}</div>`).join('');
-        const facultyLines = evData.faculty.split('\n').map(l => `<div class="mc-name">${l}</div>`).join('');
+        const studentList = normalizeCoordinators(
+            evData.studentCoordinators || evData.student,
+            'student'
+        );
+        const facultyList = normalizeCoordinators(
+            evData.facultyCoordinators || evData.faculty,
+            'faculty'
+        );
+
+        const studentLines = renderCoordinatorList(studentList);
+        const facultyLines = renderCoordinatorList(facultyList);
+
         grid.innerHTML = `
         <div class="mc-block">
           <div class="mc-label">Student Coordinators</div>

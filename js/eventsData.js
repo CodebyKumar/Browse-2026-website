@@ -17,8 +17,13 @@ window.events = {
             { icon: 'fa-layer-group', label: 'Rounds', val: '2 (Prelims & Finals)' },
             { icon: 'fa-map-pin', label: 'Venue', val: 'Research Lab, ISE' },
         ],
-        student: 'chirashree - +91 87621 93686\nNehil - +91 91312 03322',
-        faculty: 'Dr. Nagaratna B Chittaragi\n96062 25604',
+        studentCoordinators: [
+            { name: 'Chirashree', contact: '+91 87621 93686' },
+            { name: 'Nehil', contact: '+91 91312 03322' },
+        ],
+        facultyCoordinators: [
+            { name: 'Dr. Nagaratna B Chittaragi', contact: '96062 25604' },
+        ],
     },
     'ev2': {
         icon: '<i class="fas fa-brain"></i>',
@@ -36,13 +41,19 @@ window.events = {
             { icon: 'fa-layer-group', label: 'Rounds', val: '2 (Prelims & Finals)' },
             { icon: 'fa-map-pin', label: 'Venue', val: 'Koutilya Lab, ISE' },
         ],
-        student: 'Manoj - 9008126740\nBalaji - 7090914581\nNaveen - 8618742198',
-        faculty: 'Dr. Sharathkumar\n95353 21023',
+        studentCoordinators: [
+            { name: 'Manoj', contact: '9008126740' },
+            { name: 'Balaji', contact: '7090914581' },
+            { name: 'Naveen', contact: '8618742198' },
+        ],
+        facultyCoordinators: [
+            { name: 'Dr. Sharathkumar', contact: '95353 21023' },
+        ],
     },
     'ev3': {
         icon: '<i class="fas fa-microphone"></i>',
-        tag: 'WITTY BYTE',
-        name: 'WITTYBYTE',
+        tag: 'TECH TALK',
+        name: 'WITTY BYTE',
         sub: 'TECH TALK',
         color: '#39ff14',
         rules: [
@@ -56,8 +67,13 @@ window.events = {
             { icon: 'fa-layer-group', label: 'Rounds', val: '4 rounds' },
             { icon: 'fa-map-pin', label: 'Venue', val: 'Project Lab, CSE' },
         ],
-        student: 'Haradeep Reddy - 7416719446\nSachin - 9606426567',
-        faculty: 'Dr. H D Kallinatha\n99862 95070',
+        studentCoordinators: [
+            { name: 'Haradeep Reddy', contact: '7416719446' },
+            { name: 'Sachin', contact: '9606426567' },
+        ],
+        facultyCoordinators: [
+            { name: 'Dr. H D Kallinatha', contact: '99862 95070' },
+        ],
     },
     'ev4': {
         icon: '<i class="fas fa-gamepad"></i>',
@@ -80,8 +96,13 @@ window.events = {
             { icon: 'fa-users', label: 'BGMI', val: '4 members' },
             { icon: 'fa-map-pin', label: 'Venue', val: 'Media Center/MBA Block' },
         ],
-        student: 'Omsai Reddy - 8861611227\nYashaswini P - 91 80886 88451',
-        faculty: 'Dr. Keerthan Kumar\n88846 74522',
+        studentCoordinators: [
+            { name: 'Omsai Reddy', contact: '8861611227' },
+            { name: 'Yashaswini P', contact: '+91 80886 88451' },
+        ],
+        facultyCoordinators: [
+            { name: 'Dr. Keerthan Kumar', contact: '88846 74522' },
+        ],
     },
     'ev5': {
         icon: '<i class="fas fa-terminal"></i>',
@@ -100,8 +121,13 @@ window.events = {
             { icon: 'fa-code', label: 'Language', val: 'C / C++' },
             { icon: 'fa-map-pin', label: 'Venue', val: 'RCC Lab, CSE' },
         ],
-        student: 'Sujal Jain V - 9353058451\nAshay Amal - 9263432983',
-        faculty: 'Dr. Srinivasa K\n98453 99083',
+        studentCoordinators: [
+            { name: 'Sujal Jain V', contact: '9353058451' },
+            { name: 'Ashay Amal', contact: '9263432983' },
+        ],
+        facultyCoordinators: [
+            { name: 'Dr. Srinivasa K', contact: '98453 99083' },
+        ],
     },
     'ev6': {
         icon: '<i class="fas fa-pen-ruler"></i>',
@@ -124,8 +150,14 @@ window.events = {
             { icon: 'fa-robot', label: 'AI Prompts', val: 'Max 10 per tool' },
             { icon: 'fa-map-pin', label: 'Venue', val: 'Linux Laboratory, CSE' },
         ],
-        student: 'Ujwal Pai - 97316 36663\nChaithra Aradhya - 81528 75878\nShalmala G Nadig - 90192 81825',
-        faculty: 'Dr Anupama T A\n99003 98122',
+        studentCoordinators: [
+            { name: 'Ujwal Pai', contact: '97316 36663' },
+            { name: 'Chaithra Aradhya', contact: '81528 75878' },
+            { name: 'Shalmala G Nadig', contact: '90192 81825' },
+        ],
+        facultyCoordinators: [
+            { name: 'Dr Anupama T A', contact: '99003 98122' },
+        ],
     },
     'ev7': {
         icon: '<i class="fas fa-chart-line"></i>',
@@ -148,8 +180,13 @@ window.events = {
             { icon: 'fa-layer-group', label: 'Rounds', val: '3 rounds' },
             { icon: 'fa-map-pin', label: 'Venue', val: 'Kalpana Chawla Lab, CSE' },
         ],
-        student: 'Raghavi M - 78991 23195\nAkshitha Katte - 96324 69914',
-        faculty: 'Dr. Bhargavi K\n86182 03489',
+        studentCoordinators: [
+            { name: 'Raghavi M', contact: '78991 23195' },
+            { name: 'Akshitha Katte', contact: '96324 69914' },
+        ],
+        facultyCoordinators: [
+            { name: 'Dr. Bhargavi K', contact: '86182 03489' },
+        ],
     },
     'ev8': {
         icon: '<i class="fas fa-bolt"></i>',
@@ -171,7 +208,12 @@ window.events = {
             { icon: 'fa-clock', label: 'Duration', val: '3 hours' },
             { icon: 'fa-map-pin', label: 'Venue', val: 'Aryabhatta Computer Centre, CSE' },
         ],
-        student: 'Ujwal Pai - 97316 36663\nArshan Ali Khan - 82960 15593',
-        faculty: 'Dr. R M Savithramma\n84958 22888',
+        studentCoordinators: [
+            { name: 'Ujwal Pai', contact: '97316 36663' },
+            { name: 'Arshan Ali Khan', contact: '82960 15593' },
+        ],
+        facultyCoordinators: [
+            { name: 'Dr. R M Savithramma', contact: '84958 22888' },
+        ],
     },
 };
