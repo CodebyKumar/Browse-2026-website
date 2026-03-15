@@ -156,7 +156,7 @@ window.events = {
             { name: 'Shalmala G Nadig', contact: '90192 81825' },
         ],
         facultyCoordinators: [
-            { name: 'Dr Anupama T A', contact: '99003 98122' },
+            { name: '', contact: '' },
         ],
     },
     'ev7': {
@@ -185,7 +185,7 @@ window.events = {
             { name: 'Akshitha Katte', contact: '96324 69914' },
         ],
         facultyCoordinators: [
-            { name: 'Dr. Bhargavi K', contact: '86182 03489' },
+            { name: 'Dr. Prasanna Kumar K R', contact: '' },
         ],
     },
     'ev8': {
