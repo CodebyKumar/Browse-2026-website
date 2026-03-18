@@ -129,36 +129,37 @@ window.events = {
             { name: 'Dr. Srinivasa K', contact: '98453 99083' },
         ],
     },
-    'ev6': {
-        icon: '<i class="fas fa-pen-ruler"></i>',
-        tag: 'WEB DESIGN',
-        name: 'UI/UX PRINT',
-        sub: 'Web Design Challenge',
-        color: '#1a6aff',
-        rules: [
-            'Teams can use AI tools only as specified by the club. No other tools are allowed.',
-            'A maximum of 10 prompts per AI tool is allowed.',
-            'Teams must call volunteers every time a prompt is made.',
-            'Participants must log into their own accounts and ensure AI tool history is saved.',
-            'VS Code is mandatory for development.',
-            'HTML, CSS, and JavaScript are compulsory; other frameworks may also be used.',
-            'Teams must share their GitHub report at the end of the build.',
-            '3 members per team.',
-        ],
-        info: [
-            { icon: 'fa-users', label: 'Team Size', val: '3 members' },
-            { icon: 'fa-robot', label: 'AI Prompts', val: 'Max 10 per tool' },
-            { icon: 'fa-map-pin', label: 'Venue', val: 'Linux Laboratory, CSE' },
-        ],
-        studentCoordinators: [
-            { name: 'Ujwal Pai', contact: '97316 36663' },
-            { name: 'Chaithra Aradhya', contact: '81528 75878' },
-            { name: 'Shalmala G Nadig', contact: '90192 81825' },
-        ],
-        facultyCoordinators: [
-            { name: '', contact: '' },
-        ],
-    },
+    // UI/UX PRINT is not conducted this year. Keep this block for future editions.
+    // 'ev6': {
+    //     icon: '<i class="fas fa-pen-ruler"></i>',
+    //     tag: 'WEB DESIGN',
+    //     name: 'UI/UX PRINT',
+    //     sub: 'Web Design Challenge',
+    //     color: '#1a6aff',
+    //     rules: [
+    //         'Teams can use AI tools only as specified by the club. No other tools are allowed.',
+    //         'A maximum of 10 prompts per AI tool is allowed.',
+    //         'Teams must call volunteers every time a prompt is made.',
+    //         'Participants must log into their own accounts and ensure AI tool history is saved.',
+    //         'VS Code is mandatory for development.',
+    //         'HTML, CSS, and JavaScript are compulsory; other frameworks may also be used.',
+    //         'Teams must share their GitHub report at the end of the build.',
+    //         '3 members per team.',
+    //     ],
+    //     info: [
+    //         { icon: 'fa-users', label: 'Team Size', val: '3 members' },
+    //         { icon: 'fa-robot', label: 'AI Prompts', val: 'Max 10 per tool' },
+    //         { icon: 'fa-map-pin', label: 'Venue', val: 'Linux Laboratory, CSE' },
+    //     ],
+    //     studentCoordinators: [
+    //         { name: 'Ujwal Pai', contact: '97316 36663' },
+    //         { name: 'Chaithra Aradhya', contact: '81528 75878' },
+    //         { name: 'Shalmala G Nadig', contact: '90192 81825' },
+    //     ],
+    //     facultyCoordinators: [
+    //         { name: '', contact: '' },
+    //     ],
+    // },
     'ev7': {
         icon: '<i class="fas fa-chart-line"></i>',
         tag: 'STARTUP PITCH',

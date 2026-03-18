@@ -157,10 +157,25 @@ function normalizeCoordinators(raw, role = 'student') {
 }
 
 function renderCoordinatorList(items) {
+        const getPhoneLink = (rawContact) => {
+                const contactText = String(rawContact || '').trim();
+                if (!contactText) return '';
+
+                // Extract first phone-like segment for tel: while keeping original display text.
+                const firstPhoneMatch = contactText.match(/\+?\d[\d\s-]{7,}\d/);
+                const telTarget = (firstPhoneMatch ? firstPhoneMatch[0] : contactText).replace(/[^\d+]/g, '');
+
+                if (!telTarget) {
+                        return `<div class="mc-phone">${contactText}</div>`;
+                }
+
+                return `<div class="mc-phone"><a class="contact-student-phone" href="tel:${telTarget}">${contactText}</a></div>`;
+        };
+
     return items.map(item => `
       <div class="mc-entry">
         <div class="mc-name">${item.name || ''}</div>
-        ${item.contact ? `<div class="mc-phone">${item.contact}</div>` : ''}
+                ${item.contact ? getPhoneLink(item.contact) : ''}
       </div>
     `).join('');
 }

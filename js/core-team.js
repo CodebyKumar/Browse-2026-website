@@ -75,10 +75,17 @@
                 .filter(item => item && item.name)
                 .map(item => {
                     const name = esc(item.name);
-                    const phone = esc(item.phone || '');
-                    return phone ? `${name}: ${phone}` : name;
+                    const rawPhone = String(item.phone || '').trim();
+                    const phone = esc(rawPhone);
+                    const tel = rawPhone.replace(/[^\d+]/g, '');
+                    return `
+                        <div class="contact-student-item">
+                            <span class="contact-student-name">${name}</span>
+                            ${phone ? `<a class="contact-student-phone" href="tel:${esc(tel)}">${phone}</a>` : ''}
+                        </div>
+                    `;
                 })
-                .join('<br>');
+                .join('');
         }
 
         if (emailWebBody) {
