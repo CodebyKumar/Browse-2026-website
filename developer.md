@@ -176,6 +176,42 @@ Core Team leadership and Get in Touch content are now JS-driven via `js/core-tea
 - Verify mobile breakpoints after style edits (`992px`, `768px`, `480px` areas are commonly used).
 - Avoid duplicating conflicting rules in multiple media blocks unless necessary.
 
+### Hero text block controls (current)
+
+The following hero lines are controlled by these selectors in `css/styles.css`:
+
+- `NATIONAL LEVEL TECHNICAL SYMPOSIUM` -> `.hero-tagline`
+- `ORGANISED BY` -> `.hero-organizers-label`
+- `CSE, ISE, AI&DS AND CSE(AI&ML)` -> `.hero-organizers-highlight`
+- `07 APRIL 2026 · SIT, TUMAKURU` -> `.hero-date`
+
+Markup source is in `index.html` under `#home`:
+
+- `.hero-tagline`
+- `.hero-organizers`
+- `.hero-organizers-label`
+- `.hero-organizers-highlight`
+- `.hero-date`
+
+Important: there is a late-file override block near the end of `css/styles.css` (`Final visual alignment: hero date + about stats cards`) that can override earlier `.hero-date` styles. Always check final cascade outcome after editing hero date color/size.
+
+### Mobile navbar institute title
+
+`Siddaganga Institute of Technology` in the navbar uses `.brand-title`.
+Mobile sizes are set at:
+
+- `@media (max-width: 768px)`
+- `@media (max-width: 480px)`
+
+If mobile font size changes seem ignored, search for later `.brand-title` rules in the file and adjust the last effective one.
+
+### Contact number rendering behavior (current)
+
+- Core contact section numbers are rendered in `js/core-team.js` from `coreTeamData.studentCoordinators[].phone`.
+- Event modal coordinator numbers are rendered in `js/script.js` (`renderCoordinatorList`).
+- In both places, numbers are displayed as provided in data text and turned into clickable `tel:` links by stripping non-numeric separators.
+- CSS styling for clickable numbers is shared through `.contact-student-phone` in `css/styles.css`.
+
 ## 10) QA Checklist Before Release
 
 - Check all `data-link` anchors open correct URLs
