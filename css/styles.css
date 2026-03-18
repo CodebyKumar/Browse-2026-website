@@ -647,10 +647,10 @@ body::before {
 .hero-date {
   font-family: var(--ff-mono);
   font-size: clamp(0.84rem, 1.25vw, 0.94rem);
-  color: white;
+  color: #00ffff;
   letter-spacing: 2.2px;
   margin-bottom: 2.2rem;
-  text-shadow: 0 0 8px rgba(125, 215, 246, 0.16);
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.4);
   animation: fadeInUp 0.9s 0.55s ease forwards;
   opacity: 0;
 }
@@ -3404,8 +3404,8 @@ footer {
   letter-spacing: 2px;
   line-height: 1.45;
   font-weight: 700;
-  color: #ffffff;
-  text-shadow: 0 0 12px rgba(0, 245, 255, 0.25);
+  color: #00ffff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.4);
 }
 
 .hero-date i {
