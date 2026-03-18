@@ -2,7 +2,7 @@
 
 (function applyCentralizedLinks() {
     const BROWSE_LINKS = {
-        registerForm: 'https://forms.gle/AJjoC4Zme3sCG2JHA',
+        registerForm: 'https://forms.gle/mbBr4RvoGtCDBT4g8',
         brochure: 'https://drive.google.com/file/d/1y6k1ut-QDxwT8L7Gky0SC9iIGaXXAvJT/view?usp=sharing',
         browseWebsite: 'http://browse.sit.ac.in',
         browseEmail: 'mailto:browse@sit.ac.in',
