@@ -156,26 +156,73 @@ function normalizeCoordinators(raw, role = 'student') {
     });
 }
 
-function renderCoordinatorList(items) {
-        const getPhoneLink = (rawContact) => {
-                const contactText = String(rawContact || '').trim();
-                if (!contactText) return '';
+function formatIndianMobile(rawValue) {
+    const raw = String(rawValue || '').trim();
+    const digits = raw.replace(/\D/g, '');
+    if (!digits) {
+        return { display: raw, tel: '' };
+    }
 
-                // Extract first phone-like segment for tel: while keeping original display text.
-                const firstPhoneMatch = contactText.match(/\+?\d[\d\s-]{7,}\d/);
-                const telTarget = (firstPhoneMatch ? firstPhoneMatch[0] : contactText).replace(/[^\d+]/g, '');
+    let local = digits;
+    if (digits.length === 12 && digits.startsWith('91')) {
+        local = digits.slice(2);
+    } else if (digits.length === 11 && digits.startsWith('0')) {
+        local = digits.slice(1);
+    } else if (digits.length > 10) {
+        local = digits.slice(-10);
+    }
 
-                if (!telTarget) {
-                        return `<div class="mc-phone">${contactText}</div>`;
-                }
-
-                return `<div class="mc-phone"><a class="contact-student-phone" href="tel:${telTarget}">${contactText}</a></div>`;
+    if (local.length === 10) {
+        return {
+            display: `+91 ${local}`,
+            tel: `+91${local}`
         };
+    }
+
+    return {
+        display: raw.replace(/\s+/g, ' '),
+        tel: `+${digits}`
+    };
+}
+
+function formatContactText(rawContact) {
+    const input = String(rawContact || '').trim();
+    if (!input) {
+        return { display: '', tel: '' };
+    }
+
+    let firstTel = '';
+    const phonePattern = /\+?\d[\d\s-]{8,}\d/g;
+    const display = input.replace(phonePattern, (match) => {
+        const formatted = formatIndianMobile(match);
+        if (!firstTel && formatted.tel) {
+            firstTel = formatted.tel;
+        }
+        return formatted.display;
+    });
+
+    if (!firstTel) {
+        const fallback = formatIndianMobile(input);
+        return { display: fallback.display, tel: fallback.tel };
+    }
+
+    return { display, tel: firstTel };
+}
+
+function renderCoordinatorList(items) {
+    const getPhoneLink = (rawContact) => {
+        const formatted = formatContactText(rawContact);
+        if (!formatted.display) return '';
+        if (!formatted.tel) {
+            return `<div class="mc-phone">${formatted.display}</div>`;
+        }
+        return `<div class="mc-phone"><a class="contact-student-phone" href="tel:${formatted.tel}">${formatted.display}</a></div>`;
+    };
 
     return items.map(item => `
       <div class="mc-entry">
         <div class="mc-name">${item.name || ''}</div>
-                ${item.contact ? getPhoneLink(item.contact) : ''}
+        ${item.contact ? getPhoneLink(item.contact) : ''}
       </div>
     `).join('');
 }

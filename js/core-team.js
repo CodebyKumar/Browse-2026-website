@@ -39,6 +39,35 @@
             .replace(/'/g, '&#39;');
     }
 
+    function formatIndianMobile(rawValue) {
+        const raw = String(rawValue || '').trim();
+        const digits = raw.replace(/\D/g, '');
+        if (!digits) {
+            return { display: raw, tel: '' };
+        }
+
+        let local = digits;
+        if (digits.length === 12 && digits.startsWith('91')) {
+            local = digits.slice(2);
+        } else if (digits.length === 11 && digits.startsWith('0')) {
+            local = digits.slice(1);
+        } else if (digits.length > 10) {
+            local = digits.slice(-10);
+        }
+
+        if (local.length === 10) {
+            return {
+                display: `+91 ${local}`,
+                tel: `+91${local}`
+            };
+        }
+
+        return {
+            display: raw.replace(/\s+/g, ' '),
+            tel: `+${digits}`
+        };
+    }
+
     function renderPeople(containerId, list, fallbackRole) {
         const container = document.getElementById(containerId);
         if (!container) return;
@@ -75,13 +104,13 @@
                 .filter(item => item && item.name)
                 .map(item => {
                     const name = esc(item.name);
-                    const rawPhone = String(item.phone || '').trim();
-                    const phone = esc(rawPhone);
-                    const tel = rawPhone.replace(/[^\d+]/g, '');
+                    const phoneData = formatIndianMobile(item.phone || '');
+                    const phone = esc(phoneData.display);
+                    const tel = esc(phoneData.tel);
                     return `
                         <div class="contact-student-item">
                             <span class="contact-student-name">${name}</span>
-                            ${phone ? `<a class="contact-student-phone" href="tel:${esc(tel)}">${phone}</a>` : ''}
+                            ${phone ? `<a class="contact-student-phone" href="tel:${tel}">${phone}</a>` : ''}
                         </div>
                     `;
                 })
