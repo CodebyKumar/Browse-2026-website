@@ -3031,13 +3031,21 @@ footer {
 
   .contact-student-item {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     gap: 0.2rem;
     padding: 0.45rem 0;
+    text-align: center;
+  }
+
+  .contact-student-name {
+    width: 100%;
+    text-align: center;
   }
 
   .contact-student-phone {
     font-size: 0.8rem;
+    margin-inline: auto;
   }
 
   .about-stats {
@@ -3168,25 +3176,31 @@ footer {
   /* Footer in columns on mobile */
   .footer-inner {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     align-items: start;
     text-align: left;
-    gap: 1.5rem 1.25rem;
+    gap: 1.15rem;
+    padding: 0 1.1rem 0 1.45rem;
   }
 
   .footer-brand {
-    grid-column: 1 / -1;
-    text-align: center;
+    grid-column: auto;
+    text-align: left;
   }
 
   .footer-brand p {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
   }
 
   .footer-links {
     width: 100%;
+  }
+
+  .footer-links h5 {
+    text-align: left;
+    margin-bottom: 0.75rem;
   }
 
   .footer-links ul {
@@ -3194,8 +3208,13 @@ footer {
   }
 
   .footer-bottom {
-    text-align: center;
+    text-align: left;
     padding: 1.5rem 1rem;
+  }
+
+  .footer-bottom span {
+    text-align: left;
+    white-space: normal;
   }
 
   .reg-chip, .fee-tag {
@@ -3241,8 +3260,8 @@ footer {
   }
 
   .footer-inner {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.25rem 0.9rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
     padding: 0 1rem;
   }
 
